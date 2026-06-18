@@ -1,11 +1,19 @@
-import Navbar from "./components/Navbar";
-import Dashboard from "./pages/Dashboard";
+import Sidebar from "./components/Sidebar";
+import AppRoutes from "./routes/AppRoutes";
+
+import "./styles/sidebar.css";
+import "./styles/dashboard.css";
 
 function App() {
   return (
-    <div>
-      <Navbar />
-      <Dashboard />
+    <div className="app">
+      {/* Fixed left navigation */}
+      <Sidebar />
+
+      {/* Main Content */}
+      <main className="app-main">
+        <AppRoutes />
+      </main>
     </div>
   );
 }
